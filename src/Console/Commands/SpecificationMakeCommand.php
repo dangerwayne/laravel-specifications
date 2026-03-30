@@ -4,6 +4,7 @@ namespace DangerWayne\Specification\Console\Commands;
 
 use Illuminate\Console\Concerns\CreatesMatchingTest;
 use Illuminate\Console\GeneratorCommand;
+use Illuminate\Contracts\Filesystem\FileNotFoundException;
 use Illuminate\Support\Str;
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Input\InputArgument;
@@ -40,7 +41,7 @@ class SpecificationMakeCommand extends GeneratorCommand
      *
      * @return bool|null
      *
-     * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
+     * @throws FileNotFoundException
      */
     public function handle()
     {
@@ -107,7 +108,7 @@ class SpecificationMakeCommand extends GeneratorCommand
      *
      * @param  string  $name
      *
-     * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
+     * @throws FileNotFoundException
      */
     protected function buildClass($name): string
     {

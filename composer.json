@@ -6,7 +6,14 @@
         "docs": "https://laravel-specifications-doc.netlify.app",
         "source": "https://github.com/dangerwayne/laravel-specifications"
     },
-    "keywords": ["laravel", "specification", "pattern", "ddd", "domain-driven-design", "business-rules"],
+    "keywords": [
+        "laravel",
+        "specification",
+        "pattern",
+        "ddd",
+        "domain-driven-design",
+        "business-rules"
+    ],
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -16,13 +23,13 @@
         }
     ],
     "require": {
-        "php": "^8.0",
-        "illuminate/support": "^9.0|^10.0|^11.0|^12.0",
-        "illuminate/database": "^9.0|^10.0|^11.0|^12.0",
-        "illuminate/collections": "^9.0|^10.0|^11.0|^12.0"
+        "php": "^8.3",
+        "illuminate/collections": "^9.0|^10.0|^11.0|^12.0|^13.0",
+        "illuminate/database": "^9.0|^10.0|^11.0|^12.0|^13.0",
+        "illuminate/support": "^9.0|^10.0|^11.0|^12.0|^13.0"
     },
     "require-dev": {
-        "orchestra/testbench": "^7.0|^8.0|^9.0|^10.0",
+        "orchestra/testbench": "^7.0|^8.0|^9.0|^10.0|^11.0",
         "phpunit/phpunit": "^9.5.10|^10.0|^11.0|^12.0",
         "phpstan/phpstan": "^1.10",
         "laravel/pint": "^1.0",
