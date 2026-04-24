@@ -19,10 +19,8 @@ A powerful implementation of the Specification Pattern for Laravel applications.
 - **Fluent Builder**: Intuitive API for building complex specifications
 - **Composite Operations**: Combine specifications with AND, OR, NOT operations
 - **Caching Support**: Built-in caching for improved performance
-- **Laravel 9, 10, 11, 12, 13**: Full compatibility with modern Laravel versions
-- **Type Safe**: Full PHP 8.0+ type declarations and PHPStan level 6+ compliance
-
-> **Note**: The `NOT` specification has full functionality in Laravel 10+. In Laravel 9, it provides basic compatibility with limited SQL generation capabilities.
+- **Laravel 11, 12, 13**: Full compatibility with modern Laravel versions
+- **Type Safe**: Full PHP 8.3+ type declarations and PHPStan level 6+ compliance
 
 ## Installation
 
