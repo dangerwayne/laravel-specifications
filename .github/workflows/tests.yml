@@ -61,6 +61,16 @@ jobs:
             testbench: 10.*
             dependency-version: prefer-stable
             
+          # Laravel 13 - Core compatibility
+          - php: 8.3
+            laravel: 13.*
+            testbench: 11.*
+            dependency-version: prefer-stable
+          - php: 8.4
+            laravel: 13.*
+            testbench: 11.*
+            dependency-version: prefer-stable
+
           # Key prefer-lowest tests
           - php: 8.1
             laravel: 9.*

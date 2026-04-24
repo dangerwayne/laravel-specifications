@@ -45,7 +45,7 @@ class SpecificationServiceProvider extends ServiceProvider
     {
         // Add Collection macro
         Collection::macro('whereSpecification', function ($specification) {
-            /** @var \Illuminate\Support\Collection $this */
+            /** @var Collection $this */
             return $this->filter(function ($item) use ($specification) {
                 return $specification->isSatisfiedBy($item);
             });
@@ -53,7 +53,7 @@ class SpecificationServiceProvider extends ServiceProvider
 
         // Add Builder macro
         Builder::macro('whereSpecification', function ($specification) {
-            /** @var \Illuminate\Database\Eloquent\Builder $this */
+            /** @var Builder $this */
             return $specification->toQuery($this);
         });
     }

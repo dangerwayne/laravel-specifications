@@ -2,6 +2,7 @@
 
 namespace DangerWayne\Specification\Tests;
 
+use DangerWayne\Specification\Facades\Specification;
 use DangerWayne\Specification\Providers\SpecificationServiceProvider;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -23,7 +24,7 @@ abstract class TestCase extends Orchestra
     protected function getPackageAliases($app): array
     {
         return [
-            'Specification' => \DangerWayne\Specification\Facades\Specification::class,
+            'Specification' => Specification::class,
         ];
     }
 

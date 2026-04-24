@@ -4,6 +4,7 @@ namespace DangerWayne\Specification\Tests\Integration;
 
 use DangerWayne\Specification\Facades\Specification;
 use DangerWayne\Specification\Specifications\Builders\SpecificationBuilder;
+use DangerWayne\Specification\Specifications\Common\WhereSpecification;
 use DangerWayne\Specification\Tests\TestCase;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Collection;
@@ -41,7 +42,7 @@ class ServiceProviderTest extends TestCase
             (object) ['status' => 'inactive'],
         ]);
 
-        $spec = new \DangerWayne\Specification\Specifications\Common\WhereSpecification('status', '=', 'active');
+        $spec = new WhereSpecification('status', '=', 'active');
 
         $result = $collection->whereSpecification($spec);
 

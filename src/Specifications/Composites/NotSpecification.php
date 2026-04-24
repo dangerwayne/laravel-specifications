@@ -5,6 +5,7 @@ namespace DangerWayne\Specification\Specifications\Composites;
 use DangerWayne\Specification\Contracts\SpecificationInterface;
 use DangerWayne\Specification\Specifications\AbstractSpecification;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Support\Facades\DB;
 
 class NotSpecification extends AbstractSpecification
 {
@@ -35,7 +36,7 @@ class NotSpecification extends AbstractSpecification
         // Create a subquery that will contain the conditions to negate
         /** @var Builder $result */
         $result = $query->whereNotExists(function (\Illuminate\Database\Query\Builder $subQuery) use ($table, $keyName, $model) {
-            $subQuery->select(\Illuminate\Support\Facades\DB::raw(1))
+            $subQuery->select(DB::raw(1))
                 ->from($table.' as not_sub')
                 ->whereColumn('not_sub.'.$keyName, $table.'.'.$keyName);
 
